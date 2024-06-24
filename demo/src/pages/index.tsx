@@ -3,7 +3,7 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 
-const DiscordUserListsItems = ({ userPlaylists }) => (
+const DiscogsUserListsItems = ({ userPlaylists }) => (
   <React.Fragment>
     {userPlaylists.map((p) => {
       if (!p.id) return null
@@ -26,7 +26,7 @@ const DiscordUserListsItems = ({ userPlaylists }) => (
   </React.Fragment>
 )
 
-const DiscordUserLists = ({ userPlaylists }) => (
+const DiscogsUserLists = ({ userPlaylists }) => (
   <React.Fragment>
     {userPlaylists.map((p) => {
       if (!p.name) return null
@@ -49,7 +49,7 @@ const DiscordUserLists = ({ userPlaylists }) => (
           <p>Resource URL: {p.resource_url}</p>
           <p>Is public: {p.public === true ? `Yes` : `No`}</p>
           <h3>Items</h3>
-          {p.items.length > 0 ? <DiscordUserListsItems userPlaylists={p.items} /> : <p>No items found</p>}
+          {p.items.length > 0 ? <DiscogsUserListsItems userPlaylists={p.items} /> : <p>No items found</p>}
         </React.Fragment>
       )
     })}
@@ -65,7 +65,7 @@ const IndexPage = ({ data: { allDiscogsUserLists } }: { data: Queries.IndexPageQ
       </p>
       {allDiscogsUserLists.nodes &&
         (allDiscogsUserLists.nodes.length > 0 ? (
-          <DiscordUserLists userPlaylists={allDiscogsUserLists.nodes} />
+          <DiscogsUserLists userPlaylists={allDiscogsUserLists.nodes} />
         ) : (
           <p>No playlists found</p>
         ))}

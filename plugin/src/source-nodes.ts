@@ -11,12 +11,12 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async (gatsbyApi, pluginOp
     auth = { userToken: api_token }
   }
   const user = new Discogs(auth).user()
-  const userLists = promisify(user.getLists)
+  const userGetListsPromisse = promisify(user.getLists)
 
   let userListsRes
 
   try {
-    userListsRes = await userLists(username)
+    userListsRes = await userGetListsPromisse(username)
   } catch (error) {
     gatsbyApi.reporter.panicOnBuild({
       id: ERROR_CODES.createDiscogsUser,

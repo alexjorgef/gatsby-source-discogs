@@ -7,7 +7,6 @@ describe(`pluginOptionsSchema`, () => {
     const options = {
       api_token: undefined,
       username: undefined,
-      endpoints: `test`,
     }
 
     const { isValid, errors } = await testPluginOptionsSchema(pluginOptionsSchema, options)
@@ -19,18 +18,6 @@ describe(`pluginOptionsSchema`, () => {
     const options = {
       api_token: undefined,
       username: undefined,
-      endpoints: [
-        {
-          method: undefined,
-          args: `test`,
-          extension: {
-            method: undefined,
-            mapping: {
-              test: `test`,
-            },
-          },
-        },
-      ],
     }
 
     const { isValid, errors } = await testPluginOptionsSchema(pluginOptionsSchema, options)
