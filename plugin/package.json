@@ -1,6 +1,6 @@
 {
   "name": "@alexjorgef/gatsby-source-discogs",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Gatsby source plugin for Discogs",
   "main": "dist/gatsby-node.js",
   "source": "src/gatsby-node.ts",
