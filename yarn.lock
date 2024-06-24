@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@alexjorgef/gatsby-source-discogs@^0.0.1, @alexjorgef/gatsby-source-discogs@workspace:plugin":
+"@alexjorgef/gatsby-source-discogs@^0.1.0, @alexjorgef/gatsby-source-discogs@workspace:plugin":
   version: 0.0.0-use.local
   resolution: "@alexjorgef/gatsby-source-discogs@workspace:plugin"
   dependencies:
@@ -8025,7 +8025,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "demo@workspace:demo"
   dependencies:
-    "@alexjorgef/gatsby-source-discogs": ^0.0.1
+    "@alexjorgef/gatsby-source-discogs": ^0.1.0
     gatsby: ^5.12.1
     gatsby-adapter-netlify: ^1.0.0
     react: ^18.2.0
