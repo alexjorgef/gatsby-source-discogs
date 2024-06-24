@@ -15,7 +15,7 @@ Original error: ${context.sourceMessage}`,
       text: (context) =>
         `There was an error creating the "DiscogsUser" node.
 
-Original error: ${context.sourceMessage}`,
+Original error (username: ${context.username}): ${context.sourceMessage}`,
       level: `ERROR`,
       category: `USER`,
     },
