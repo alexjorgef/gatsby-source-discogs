@@ -25,5 +25,3 @@ jobs:
         run: yarn --immutable
       - name: Run Parcel Build
         run: yarn package:build
-      - name: Generate README
-        run: yarn package:readme
