@@ -21,7 +21,8 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async (gatsbyApi, pluginOp
     gatsbyApi.reporter.panicOnBuild({
       id: ERROR_CODES.createDiscogsUser,
       context: {
-        sourceMessage: username,
+        sourceMessage: error.message,
+        username,
       },
     })
   }
