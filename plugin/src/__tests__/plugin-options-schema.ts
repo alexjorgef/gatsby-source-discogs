@@ -13,7 +13,7 @@ describe(`pluginOptionsSchema`, () => {
     const { isValid, errors } = await testPluginOptionsSchema(pluginOptionsSchema, options)
 
     expect(isValid).toBe(false)
-    expect(errors).toEqual([`"api_token" is required`, `"username" is required`, `"endpoints" must be an array`])
+    expect(errors).toEqual([`"api_token" is required`, `"username" is required`])
   })
   it(`should invalidate incorrect options (deep)`, async () => {
     const options = {
@@ -36,31 +36,12 @@ describe(`pluginOptionsSchema`, () => {
     const { isValid, errors } = await testPluginOptionsSchema(pluginOptionsSchema, options)
 
     expect(isValid).toBe(false)
-    expect(errors).toEqual([
-      `"api_token" is required`,
-      `"username" is required`,
-      `"endpoints[0].method" is required`,
-      `"endpoints[0].args" must be of type object`,
-      `"endpoints[0].extension.method" is required`,
-      `"endpoints[0].extension.mapping" must be a string`,
-    ])
+    expect(errors).toEqual([`"api_token" is required`, `"username" is required`])
   })
   it(`should validate correct options`, async () => {
     const options = {
       api_token: `test`,
       username: `test`,
-      endpoints: [
-        {
-          method: `test`,
-          args: {
-            extras: `test`,
-          },
-          extension: {
-            method: `test`,
-            mapping: `test:123`,
-          },
-        },
-      ],
     }
 
     const { isValid, errors } = await testPluginOptionsSchema(pluginOptionsSchema, options)
