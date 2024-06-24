@@ -49,7 +49,7 @@ Your Discogs API token. Create an account on Discogs, go to [Settings > Develope
 
 ### username (**required**)
 
-Your Discogs username.
+The Discogs username to search.
 
 **Field type**: `String`
 
